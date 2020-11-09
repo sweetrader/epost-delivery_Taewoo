@@ -10,7 +10,7 @@ input, textarea{
     display: flex;
     flex: 1;
     width: 100%;    
-    border-radius: rem(10);
+    border-radius: rem(5);
     height: rem(82);
     line-height: rem(82);
     border: 1px solid $border;
@@ -23,7 +23,7 @@ input, textarea{
     display: flex;
     flex: 1;
     width: 100%; 
-    border-radius: rem(10);
+    border-radius: rem(5);
     height: rem(153);
     border: 1px solid $border;
     margin-bottom: rem(20);  
@@ -88,7 +88,7 @@ select {
     padding-top: rem(96);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(100vh - 1.33rem);
     .section{
         background: white;
         margin-top: rem(14);
@@ -419,6 +419,7 @@ select {
 #result-post{
     text-align: center;
     margin-top: rem(96);
+    min-height: calc(100vh - 1.33rem);
     line-height: normal;
     @include sidePadding(30);
     .top-aria{
@@ -478,6 +479,261 @@ select {
         }
         p{
             @include font-style(24, $gy, NotoSans-Regular);
+        }
+    }
+}
+
+#post-list {
+    margin-top: rem(96);
+}
+
+
+
+#filterin-quiry-container{
+    width: 100%;
+    background-color: white;
+    padding-top: rem(96);
+    min-height: calc(100vh - 1.33rem);
+    .container{
+        @include sidePadding(30);
+        .space-text-bar{
+            margin: rem(20) 0 rem(20) 0;
+            width: rem(640);
+            padding-left: rem(20);
+            height: rem(82);
+            border-radius: rem(5);
+            line-height: rem(82);
+            border: 1px solid $border;
+            @include font-style(28, $placehorder, NotoSans-Regular);  
+        }
+        .local-pick{
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+            margin: rem(20) 0 rem(60) 0;
+            width: rem(640);
+            padding-left: rem(20);
+            height: rem(82);
+            line-height: rem(82);
+            border: 1px solid $border;
+            border-radius: rem(5);
+            @include font-style(28, $placehorder, NotoSans-Regular);
+                img{
+                    padding-right: rem(10);
+                    width: rem(26);
+                    height: rem(31);
+                }
+        }
+        .subtitle{
+            margin-top: rem(60);
+            margin-bottom: rem(15);
+            @include font-style(28, $purple, NotoSans-Regular);
+        }
+        .choice-day{       
+            width: rem(660);
+            height: rem(82);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            line-height: rem(82);
+            text-align: center;
+            .choice-today{
+                border: 1px solid $border;
+                border-radius: rem(5) 0 0 rem(5);
+                @include font-style(28, $gy-text, NotoSans-Regular);
+            }
+            .choice-oneweek{
+                border-top: 1px solid $border;
+                border-bottom: 1px solid $border;
+                @include font-style(28, $gy-text, NotoSans-Regular);
+            }
+            .choice-onemonth{
+                border: 1px solid $border;
+                border-radius: 0 rem(5) rem(5) 0;
+                @include font-style(28, $gy-text, NotoSans-Regular);
+            }
+        }
+        .each-text-of-two{
+            // width: max-content;
+            height: rem(82);
+            line-height: rem(82);
+            text-align: right;
+            @include sidePadding(15);
+            @include font-style(28, $gy, NotoSans-Regular);
+        }
+        .input-container{
+            display: grid;
+            margin-top: rem(20);
+            line-height: rem(82);
+            display: flex;
+            .input-text1{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border: 1px solid $border;
+                border-radius: rem(5);
+                width: rem(280);
+                height: rem(82);
+                padding-left: rem(20);
+                @include font-style(28, $placehorder, NotoSans-Regular);
+                img{
+                    padding-right: rem(20);
+                    justify-self: end;
+                    align-self: center;
+                    width: rem(33);
+                    height: rem(30);
+                }
+            }
+            .input-image{
+                text-align: center;
+                img{
+                    width: rem(17);
+                    height: rem(28);
+                }
+            }
+            .input-text2{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border: 1px solid $border;
+                border-radius: rem(5);
+                width: rem(280);
+                height: rem(82);
+                padding-left: rem(20);
+                @include font-style(28, $placehorder, NotoSans-Regular);
+                img{
+                    padding-right: rem(20);
+                    justify-self: end;
+                    align-self: center;
+                    width: rem(33);
+                    height: rem(30);
+                }
+            }
+        }
+
+        .wraper-two-div{
+            width: 100%;
+            display: flex;
+            .inner-wrap{
+                width: max-content;
+                display: flex;                        
+            }                  
+            .checkbox{               
+                margin-left: auto;  
+                height: rem(82);
+                line-height: rem(82);
+                padding-left: rem(50);
+                box-sizing: border-box;
+                @include background('../assets/image/icons/check-off.png', rem(42) rem(42), 0 50%);
+                @include font-style(28, $gy, NotoSans-Regular);
+            }
+            .on {
+                @include background('../assets/image/icons/check-on.png', rem(42) rem(42), 0 50%);
+            }
+        
+        }   
+          
+    }
+    .bottom-container{
+        padding-top: rem(60.5);
+        margin-top: rem(60.5);
+        border-top: 1px solid $border;
+        @include sidePadding(30);
+    }    
+}
+
+#select_region{
+    background-color: white;
+    min-height: calc(100vh - 1.33rem);
+    padding-top: rem(96);
+    
+    .tab-aria{
+        height: rem(96);
+        display: flex;
+        margin-bottom: rem(60);
+        @include font-style(28, $gy, NotoSans-Regular);
+        @include background('../assets/image/icons/path-right-gy.png', rem(36) rem(36), 50% 50%,#F9F4EB);
+        dt {
+            flex: 1;
+            line-height: rem(96);     
+            p{  
+               
+                height: rem(93);
+                width: max-content;
+                margin: 0 auto;
+                padding: 0 rem(10);
+            }
+            .on {
+               
+                border-bottom: 3px solid $red;                
+            }       
+            .red-text {
+                color: red!important;
+            }
+        }
+    }
+    .ctgr-list-section{
+        text-align: center;
+        display: flex;
+        @include font-style(28, $gy, NotoSans-Regular);
+
+        @supports (display: grid) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            display: -ms-grid;
+            -ms-grid-columns : 1fr 1fr 1fr;
+        }
+        dt {
+            height: rem(96);
+        }
+    }
+}
+
+#post-list{
+    line-height: normal;
+    .notice-section{
+        height: rem(85);
+        line-height: rem(85);
+        text-align: center;
+        @include noUrlBackgroundSetting(rem(106) rem(85), 0 0, $red);
+        p{
+            @include font-style(24, white, NotoSans-Regular);
+        }
+    }
+    .list-section{
+        margin-top: rem(14);
+        background-color: white;
+        .each-list-item{
+            display: flex;
+            border-bottom: 1px solid $border;
+            padding: rem(40) 0 rem(37) 0;
+            @include sidePadding(30);
+            .left{
+                flex-grow: 1;
+                .top{
+                    @include font-style(24, $bk, NotoSans-Regular);
+                }
+                .bottom{
+                    margin-top: rem(10);
+                    display: flex;
+                   p {
+                    &:last-child {
+                        margin-left: rem(20);
+                        padding-left: rem(20);
+                        border-left: 1px solid $border;
+                    }
+                   }
+                    @include font-style(24, $gy, NotoSans-Regular);
+
+                }
+            }
+            .right{
+                text-align: right;
+                .top {
+                    @include font-style(22, $gy, NotoSans-Regular);
+                }
+                @include font-style(24, $gy, NotoSans-Regular);
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }

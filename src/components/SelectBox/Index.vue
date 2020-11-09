@@ -1,8 +1,8 @@
 <template>
-  <transition name="slides">
-    <div v-show="open" id="select-box" >
+  <transition name="slide">
+    <div v-show="open" id="select-box">
       <div class="dim"/>
-      <section class="select-list-wraper">
+      <section :class="open ? 'select-list-wraper' : 'select-list-wraper'">
         <div class="header">{{ header }}<img src="@/assets/image/icons/x.png" @click="$emit('select', '')"></div>
         <dl>
           <dt v-for="( option, index ) in optionList" :key="option.index" :class="activeArray[index] ? 'each-option on' : 'each-option'" @click="onClickOptionBtn(index)">

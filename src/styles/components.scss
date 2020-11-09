@@ -1,40 +1,13 @@
 
 // ----------------------
-// 슬라이드 업
-// ----------------------
-.slide-enter-active {
-    animation: slide-up 0.8s ease-in-out;
-  }
-  .slidedown-leave-active {
-    animation: slide-down 1s ease-in-out;
-  }
-  
-  @keyframes slide-up {
-  
-   0%{
-    bottom: rem(-480);
-   }
-  
-   100%{
-    bottom: rem(100);
-  
-   }
-  }
-  @keyframes slide-down {
-    from{
-      bottom: rem(100);
-    }
-    to {
-      bottom: rem(-700);
-    }
-  }
-
-// ----------------------
 // header
 // ----------------------
 * {
     margin: 0;
     padding: 0;
+}
+.border-bottom-on {
+    border-bottom: 1px solid $border;
 }
 #header{
     width:100%;
@@ -48,6 +21,7 @@
     font-weight:normal;
     display: flex;
     align-items: center;
+    
     .menu-box{
         line-height: normal;
         width: rem(160);
@@ -136,7 +110,7 @@
         p{  
             margin: 0 auto;
             width: max-content;
-            height: rem(81);
+            height: rem(82);
             @include font-style(24, $gy, NotoSans-Regular);
         }
         .active{
@@ -282,10 +256,10 @@
         border: 1px solid $red;
     }
     .border-radius-left{
-        border-radius: rem(10) 0 0 rem(10);
+        border-radius: rem(5) 0 0 rem(5);
     }
     .border-radius-right{
-        border-radius: 0 rem(10) rem(10) 0;
+        border-radius: 0 rem(5) rem(5) 0;
     }           
     .middle{
         border-right: none;
@@ -303,29 +277,14 @@
 // 필터바
 #filter_bar{
     .region_filter_section{
-        padding-top: rem(20);
         display: flex;
         padding-left: rem(20);
         box-sizing: border-box;
-        padding-bottom: rem(20);
-        border-bottom: 1px solid $border;
+        // border-bottom: 1px solid $border;
         background-color: white;
-        .address-wraper{
-            height: rem(82);
-            line-height: rem(82);
-            width: rem(342);
-            border: 1px solid $border;
-            text-align: left;
-            border-radius: rem(10);    
-            margin-right: rem(20);           
-            @include background('../assets/image/icons/map.png', rem(26.6) rem(31.92), rem(20) 50%);
-            @include font-style(28, $bk, NotoSans-Regular);
-            @include sidePadding(20);
-            padding-left: rem(60);
-        }
+        height: rem(122);
+        line-height: rem(122);
         .select-wraper{
-            border: 1px solid $border;
-            border-radius: rem(10);   
             flex-grow: 1;
             display: flex;
             align-items: center;
@@ -333,8 +292,8 @@
             @include sidePadding(10);
             @include background('../assets/image/icons/path-below.png', rem(36) rem(36), 95% 50%);
             .place-holder{
-                text-align: left;
-                @include font-style(28, $gy, NotoSans-Regular);
+                text-align: right;
+                @include font-style(24, $gy, NotoSans-Regular);
                 @include ellipsis(200);
 
             }
@@ -342,8 +301,8 @@
         }
         .filter-wraper{
             width: rem(82);
-            height: rem(82);
-            @include background('../assets/image/icons/filter.png', rem(82) rem(82), 0 50%);
+            height: rem(122);
+            @include background('../assets/image/icons/filter.png', rem(82) rem(82), 50% 40%);
         }
         .total-amount{
             line-height: normal;
@@ -377,7 +336,8 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        height: rem(686);
+        min-height: rem(417);
+        max-height: rem(686);
         .header{
             position: fixed;
             border-radius: rem(30) rem(30) 0 0; 

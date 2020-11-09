@@ -1,10 +1,9 @@
 <template>
   <div id="select_region">
-    <Header title="지역선택" :on-close="true"/>
+    <Header title="지역선택" :on-close="true" />
     <dl class="tab-aria">
       <dt><p :class="tabOn[0] ? 'on tab' : 'tab'" @click="onTab(0)">{{selectCity}}</p></dt>
       <dt><p :class="tabOn[1] ? 'on tab' : 'tab'" @click="onTab(1)">{{selectState}}</p></dt>
-      <dt><p :class="tabOn[2] ? 'on tab' : 'tab'" @click="onTab(2)">{{selectAdditionalAddr}}</p></dt>
     </dl>
 
     <dl class="ctgr-list-section">
@@ -29,7 +28,7 @@ export default {
       selectCity: '시/도 선택',
       selectState: '시/군/구 선택',
       selectAdditionalAddr: '읍/면/동 선택',
-      tabOn: [true, false, false],
+      tabOn: [true, false],
       ctgrList: ['전체', '서울', '경기', '인천', '강원', '부산', '경상남도', '경상북도', '충청남도', '충청북도', '광주', '대전', '전라남도', '전라북도', '제주']
     }
   },
