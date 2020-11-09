@@ -1,0 +1,141 @@
+// 컬러컨셉
+$bk: #212529;
+$red: #DE6153;
+$gy-text: #868E96;
+$placehorder: #ADB5BD;
+$btn-bg: #F5F5F5;
+$header-bg: #525978;
+$deepGy: #495057;
+$gy:  #868E96;
+$border: #CED4DA;
+$purple:#6C7AB2;
+$blue : #4499EE;
+$oceanblue: #4499EE;
+$gray:#EEEEEE;
+$deepgray:#495057;
+
+
+
+// import style sheet
+@import 'mixin';
+@import 'components';
+@import 'post';
+// @import 'post';
+// @import 'postdetail';
+// @import 'demand_info';
+// @import 'enrollmentlist';
+// @import 'interests';
+// @import 'condition';
+// @import 'contract';
+// @import 'space_management';
+
+// font
+
+@font-face {
+	font-family: NotoSans-Regular;
+	// 해당하는 포멧 설정 찾아서 세팅
+	src: url('~@/assets/font/NotoSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: NotoSans-Bold;
+	// 해당하는 포멧 설정 찾아서 세팅
+	src: url('~@/assets/font/NotoSansKR-Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  @font-face {
+	font-family: NotoSans-Black;
+	// 해당하는 포멧 설정 찾아서 세팅
+	src: url('~@/assets/font/NotoSansKR-Black.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+@font-face {
+font-family: Roboto-Regular;
+// 해당하는 포멧 설정 찾아서 세팅
+src: url('~@/assets/font/Roboto-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+	font-family: Roboto-Bold;
+	// 해당하는 포멧 설정 찾아서 세팅
+	src: url('~@/assets/font/Roboto-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+html {
+	background-color: #EEEEEE;
+	*{
+		outline: none;
+		font-size: rem(28);
+		line-height: normal;
+	}
+
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.not_scroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.no_list {
+	font-size: 0.35rem;
+	color: #6e6e6e;
+	text-align: center;
+	margin-top: rem(30);
+	margin-bottom: rem(30);
+  }
