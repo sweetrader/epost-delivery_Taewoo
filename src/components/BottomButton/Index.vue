@@ -16,7 +16,7 @@
 
     <template v-else>
       <div class="one-button">
-        <div :class="isValid ? 'one-button-click' : 'one-button-click invalid'" @click="onClickOneButton()">
+        <div :class="isValid ? 'one-button-click' : isBackWhite? 'one-button-click white' : 'one-button-click invalid'" @click="onClickOneButton()">
           <img v-show="oneButton === '관심등록'" src="@/assets/image/icons/bookclip.png">
           {{ oneButton }}</div>
       </div>
@@ -46,6 +46,10 @@ export default {
       default: ''
     },
     isValid: {
+      type: Boolean,
+      default: false
+    },
+    isBackWhite: {
       type: Boolean,
       default: false
     }

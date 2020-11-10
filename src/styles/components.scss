@@ -111,12 +111,12 @@
             margin: 0 auto;
             width: max-content;
             height: rem(82);
-            @include font-style(24, $gy, NotoSans-Regular);
+            @include font-style(28, $gy, NotoSans-Regular);
         }
         .active{
             border-bottom: 3px solid $red;
             padding: 0 rem(10);
-            @include font-style(24, $bk, NotoSans-Regular);
+            @include font-style(28, $bk, NotoSans-Regular);
         }
     }
 }
@@ -189,10 +189,13 @@
                 vertical-align: auto;
             }
         }
-
         .invalid{
             background-color: #EEEEEE!important;
             color: #CED4DA!important;
+        }
+        .white {
+            background-color: white!important;
+            color: $bk!important;
         }
     }
 }
@@ -232,8 +235,9 @@
 }
 
 
-// 쓰리 토글
-
+// ----------------------
+// 세개짜리 토글
+// ----------------------
 #toggle-button{
     display: flex;
     padding-top: rem(20);
@@ -274,7 +278,9 @@
 }
 
 
+// ----------------------
 // 필터바
+// ----------------------
 #filter_bar{
     .region_filter_section{
         display: flex;
@@ -315,7 +321,9 @@
 
  
 }
-
+// ----------------------
+// 커스텀 셀렉트박스
+// ----------------------
 #select-box{
     text-align: center;
     .dim{
@@ -337,7 +345,7 @@
         bottom: 0;
         left: 0;
         min-height: rem(417);
-        max-height: rem(686);
+        height: rem(686);
         .header{
             position: fixed;
             border-radius: rem(30) rem(30) 0 0; 

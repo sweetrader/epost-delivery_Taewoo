@@ -1,4 +1,5 @@
 <template>
+<!-- 05택배배송_02게시글_04지역, 05택배배송_02게시글_05지역, 05택배배송_02게시글_06지역 -->
   <div id="select_region">
     <Header title="지역선택" :on-close="true" />
     <dl class="tab-aria">

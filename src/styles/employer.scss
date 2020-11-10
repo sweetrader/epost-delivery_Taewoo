@@ -1,0 +1,51 @@
+#task-list {
+    margin-top: rem(96);
+    line-height: normal;
+    .list-section{
+        margin-top: rem(14);
+        background-color: white;
+        .each-item{
+            display: flex;
+            align-items: center;
+            padding-top: rem(40);
+            padding-bottom: rem(37);
+            border-bottom: 1px solid $border;
+            @include sidePadding(30);
+            .left-part{
+                width: rem(550);
+                
+                h3{
+                    margin-bottom: rem(10);
+                    @include limitTwoLine();
+                    @include font-style(28, $bk, NotoSans-Regular);
+                }
+                p{
+                    @include font-style(24, $gy, NotoSans-Regular);
+                    span{
+                        border-right: 1px solid $border;
+                        padding-right: rem(10);
+                        margin-right: rem(10);
+                        &:last-child {
+                            border-right: none;
+                            padding-right: none;
+                            margin-right: none;
+                        }
+                    }
+                }
+            }
+            .right-part{
+                flex-grow: 1;
+                text-align: right;
+                @include font-style(24, $gy, NotoSans-Regular);
+                .on {
+                    color: $red;
+                }
+            }
+        }
+    }
+
+}
+
+#task-detail {
+    margin-top: rem(96);
+}
