@@ -5,13 +5,15 @@ Vue.use(VueRouter)
 
 
 const routes = [
-  
+
   { path: '/', name: 'RegisterPost', component: () => import('@/views/post/RegisterPost.vue') },
   { path: '/post_result', name: 'PostResult', component: () => import('@/views/post/PostResult.vue') },
   { path: '/post_list', name: 'PostList', component: () => import('@/views/post/PostList.vue') },
   { path: '/filter', name: 'Filter', component: () => import('@/views/post/Filter.vue') },
   { path: '/select_region', name: 'SelectRegion', component: () => import('@/views/post/SelectRegion.vue') },
-
+  // transit
+  { path: '/transit/register', name: 'RegisterTransit', component: () => import('@/views/transit/RegisterTransit.vue') },
+  { path: '/transit/result', name: 'TransitResult', component: () => import('@/views/transit/TransitResult.vue') }
 ]
 
 const router = new VueRouter({
@@ -25,7 +27,7 @@ const router = new VueRouter({
 })
 
 // router.beforeEach((to, from, next) => {
- 
+
 // })
 
 export default router

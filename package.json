@@ -15,6 +15,7 @@
     "core-js": "^2.6.11",
     "element-ui": "^2.13.2",
     "element-ui-mobile": "^1.0.2",
+    "moment": "^2.29.1",
     "store": "^2.0.12",
     "vue": "^2.6.11",
     "vue-cookies": "^1.7.4",
