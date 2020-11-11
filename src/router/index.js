@@ -16,8 +16,10 @@ const routes = [
   { path: '/apply-result', name: 'ApplyResult', component: () => import('@/views/post/ApplyResult.vue') },
 
   // employer
-  { path: '/task-list', name: 'TaskList', component: () => import('@/views/employer/TaskList.vue') },
-  { path: '/task-detail', name: 'TaskDetail', component: () => import('@/views/employer/TaskDetail.vue') },
+  // - manage-applier
+  { path: '/task-list', name: 'TaskList', component: () => import('@/views/employer/manage_applier/TaskList.vue') },
+  { path: '/task-detail', name: 'TaskDetail', component: () => import('@/views/employer/manage_applier/TaskDetail.vue') },
+  { path: '/sand-notice', name: 'SandNotice', component: () => import('@/views/employer/manage_applier/SandNotice.vue') },
 ]
 
 const router = new VueRouter({

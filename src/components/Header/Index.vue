@@ -22,8 +22,11 @@
       <p v-if="onResister" class="btnRegister" :class="isBackDark ? 'white' : ''">등록</p>
     </section>
     <dl v-show="menuOpen" class="menu-box">
-      <dt><p>수정</p></dt>
-      <dt><p>중단</p></dt>
+      <dt><p>게시글 수정</p></dt>
+      <dt><p>공고마감</p></dt>
+      <dt><p>알림 전송</p></dt>
+      <dt><p>계약관리</p></dt>
+      <dt><p>예치금송금결과</p></dt>
     </dl>
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div id="resister-post">
     <Header title="게시글 등록"/>
     <Tab/>
-    <!-- 05택배배송_01등록_03 -->
+    <!-- 05택배배송_01등록_03 / 05택배배송_06수정-->
     <template v-if="!isRegisteredFavorJob">
       <section class="register-alert">
         <img src="@/assets/image/icons/man.png">
