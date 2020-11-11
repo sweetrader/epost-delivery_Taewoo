@@ -14,7 +14,12 @@ const routes = [
   { path: '/post_detail', name: 'PostDetail', component: () => import('@/views/post/PostDetail.vue') },
   { path: '/contract', name: 'Contract', component: () => import('@/views/post/Contract.vue') },
   { path: '/apply-result', name: 'ApplyResult', component: () => import('@/views/post/ApplyResult.vue') },
-
+  // transit
+  { path: '/transit/register', name: 'RegisterTransit', component: () => import('@/views/transit/RegisterTransit.vue') },
+  { path: '/transit/result', name: 'TransitResult', component: () => import('@/views/transit/TransitResult.vue') },
+  { path: '/transit/filter', name: 'TransitFilter', component: () => import('@/views/transit/TransitFilter.vue') },
+  { path: '/transit/list', name: 'TransitList', component: () => import('@/views/transit/TransitList.vue') },
+  // transit end.
   // employer
   // - manage-applier
   { path: '/task-list', name: 'TaskList', component: () => import('@/views/employer/manage_applier/TaskList.vue') },
@@ -33,7 +38,7 @@ const router = new VueRouter({
 })
 
 // router.beforeEach((to, from, next) => {
- 
+
 // })
 
 export default router

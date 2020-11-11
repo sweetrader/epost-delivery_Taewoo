@@ -13,6 +13,8 @@ $blue : #4499EE;
 $oceanblue: #4499EE;
 $gray:#EEEEEE;
 $deepgray:#495057;
+$purple: #7565E9;
+$bg-gray: #F5F5F5;
 
 
 
@@ -20,7 +22,9 @@ $deepgray:#495057;
 @import 'mixin';
 @import 'components';
 @import 'post';
+@import 'transit';
 @import 'employer_manage-applier';
+// @import 'post';
 // @import 'postdetail';
 // @import 'demand_info';
 // @import 'enrollmentlist';

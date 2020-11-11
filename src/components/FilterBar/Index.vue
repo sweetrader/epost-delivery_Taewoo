@@ -34,6 +34,10 @@ export default {
     totalAmount: {
       type: Number,
       default: 0
+    },
+    filterRouterName: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -53,6 +57,10 @@ export default {
       }
     },
     onFilterView() {
+      if (this.filterRouterName) {
+        this.$router.push({ name : this.filterRouterName })
+        return false
+      }
       this.$router.push('/filter')
     }
   }

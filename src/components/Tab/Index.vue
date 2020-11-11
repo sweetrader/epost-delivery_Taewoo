@@ -16,8 +16,8 @@
       </p>
     </section>
     <section @click="onChangeFocusing(3)">
-      <p :class="tabOn[3] ? 'active' : ''">
-        운송차량
+      <p :class="tabOn[3] ? 'active active-3' : ''">
+        {{ currentTab }}운송차량
       </p>
     </section>
   </div>
@@ -25,10 +25,29 @@
 
 <script>
 export default {
+  props: {
+    activeTab: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     return {
       tabOn: [true, false, false, false]
     }
+  },
+  computed: {
+    currentTab() {
+      return this.activeTab
+    }
+  },
+  watch: {
+    currentTab() {
+      this.onChangeFocusing(this.currentTab)
+    }
+  },
+  created() {
+    this.onChangeFocusing(this.currentTab)
   },
   methods: {
     onChangeFocusing(index) {
