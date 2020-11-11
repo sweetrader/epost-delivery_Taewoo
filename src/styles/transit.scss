@@ -514,12 +514,12 @@ select{
 
                     &.up{
                         @include font-style(22, #ffffff, NotoSans-Regular);
-                        background-color: $purple;
+                        background-color: $violet;
                     }
 
                     &.down{
-                        @include font-style(22, $purple, NotoSans-Regular);
-                        border: 1px solid $purple;
+                        @include font-style(22, $violet, NotoSans-Regular);
+                        border: 1px solid $violet;
                     }
                 }
             }
@@ -596,6 +596,9 @@ select{
     }
 }
 
+#transit-detail{
+
+}
 
 .point-text-color{
     color: $red!important;
