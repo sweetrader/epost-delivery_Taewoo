@@ -13,7 +13,9 @@ const routes = [
   { path: '/select_region', name: 'SelectRegion', component: () => import('@/views/post/SelectRegion.vue') },
   // transit
   { path: '/transit/register', name: 'RegisterTransit', component: () => import('@/views/transit/RegisterTransit.vue') },
-  { path: '/transit/result', name: 'TransitResult', component: () => import('@/views/transit/TransitResult.vue') }
+  { path: '/transit/result', name: 'TransitResult', component: () => import('@/views/transit/TransitResult.vue') },
+  { path: '/transit/filter', name: 'TransitFilter', component: () => import('@/views/transit/TransitFilter.vue') },
+  { path: '/transit/list', name: 'TransitList', component: () => import('@/views/transit/TransitList.vue') }
 ]
 
 const router = new VueRouter({
